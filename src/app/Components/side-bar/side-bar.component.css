@@ -7,10 +7,16 @@
 .sidebar {
   margin-top: 0.2px;
   margin-left: 0px;
-  width: 150px;
+  width: 15%;
   background-color: #29303b;
   color: white;
   height: 100%;
   display: inline-block;
   position: sticky;
+}
+
+@media (max-width: 762px) {
+  .sidebar {
+    min-width: 30%;
+  }
 }

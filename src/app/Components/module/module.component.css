@@ -1,0 +1,11 @@
+.module-div {
+  background-color: red;
+  height: 309px;
+  float: right;
+  width: 85%;
+}
+@media (max-width: 762px) {
+  .module-div {
+    max-width: 70%;
+  }
+}
