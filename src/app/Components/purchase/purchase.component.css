@@ -1,0 +1,11 @@
+.purchase-div {
+  background-color: blue;
+  height: 309px;
+  float: right;
+  width: 85%;
+}
+@media (max-width: 762px) {
+  .purchase-div {
+    max-width: 70%;
+  }
+}

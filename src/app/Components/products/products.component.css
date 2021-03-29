@@ -1,0 +1,11 @@
+.products-div {
+  background-color: green;
+  height: 309px;
+  float: right;
+  width: 85%;
+}
+@media (max-width: 762px) {
+  .products-div {
+    max-width: 70%;
+  }
+}

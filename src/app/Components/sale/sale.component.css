@@ -1,0 +1,11 @@
+.sales-div {
+  background-color: pink;
+  height: 309px;
+  float: right;
+  width: 85%;
+}
+@media (max-width: 762px) {
+  .sales-div {
+    max-width: 70%;
+  }
+}
