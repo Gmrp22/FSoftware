@@ -1,11 +1,11 @@
-.module-div {
-  background-color: red;
+.sales-div {
+  background-color: pink;
   height: 309px;
   float: right;
   width: 85%;
 }
 @media (max-width: 762px) {
-  .module-div {
+  .sales-div {
     max-width: 70%;
   }
 }

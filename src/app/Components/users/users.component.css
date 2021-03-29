@@ -1,11 +1,11 @@
-.module-div {
-  background-color: red;
+.users-div {
+  background-color: yellow;
   height: 309px;
   float: right;
   width: 85%;
 }
 @media (max-width: 762px) {
-  .module-div {
+  .urse-div {
     max-width: 70%;
   }
 }
