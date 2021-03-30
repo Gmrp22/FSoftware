@@ -1,8 +1,13 @@
 .products-div {
-  background-color: green;
-  height: 309px;
+  border: 1px;
+  border-style: solid;
+  border-color: blue;
   float: right;
   width: 85%;
+  height: fit-content;
+}
+.products-div form {
+  margin: 20px;
 }
 @media (max-width: 762px) {
   .products-div {

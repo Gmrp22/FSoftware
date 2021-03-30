@@ -23,4 +23,7 @@
   .sidebar {
     min-width: 30%;
   }
+  .sidebar-list ul {
+    margin-left: 0px;
+  }
 }
