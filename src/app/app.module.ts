@@ -9,6 +9,7 @@ import { UsersComponent } from './Components/users/users.component';
 import { ProductsComponent } from './Components/products/products.component';
 import { SaleComponent } from './Components/sale/sale.component';
 import { PurchaseComponent } from './Components/purchase/purchase.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { PurchaseComponent } from './Components/purchase/purchase.component';
     SaleComponent,
     PurchaseComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })
