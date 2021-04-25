@@ -1,9 +1,16 @@
 .purchase-div {
-  background-color: blue;
-  height: 309px;
+  height: fit-content;
   float: right;
   width: 85%;
+  border: 1px;
+  border-style: solid;
+  border-color: blue;
 }
+.purchase-div form {
+  margin: 20px;
+  padding: 20px;
+}
+
 @media (max-width: 762px) {
   .purchase-div {
     max-width: 70%;
