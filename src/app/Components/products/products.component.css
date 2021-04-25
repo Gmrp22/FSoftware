@@ -7,7 +7,8 @@
   height: fit-content;
 }
 .products-div form {
-  margin: 20px;
+  margin: 40px;
+  padding: 20px;
 }
 @media (max-width: 762px) {
   .products-div {
