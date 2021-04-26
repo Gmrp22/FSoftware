@@ -1,6 +1,6 @@
 <div class="sales-div">
     <h1 class="titulo">Ventas</h1>
-    <button mat-raised-button color="primary">Agregar venta</button>
+    <button mat-raised-button color="primary">Agregar ventas</button>
 
     <table mat-table [dataSource]="data" class="mat-elevation-z8">
         <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
@@ -20,4 +20,5 @@
         <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
         <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
     </table>
+
 </div>

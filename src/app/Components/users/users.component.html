@@ -1,11 +1,12 @@
 <div class="users-div">
-    <h1 class="titulo">Usuario</h1>
-    <button mat-raised-button color="primary">Agregar Usuario</button>
+    <h1 class="titulo">Usuarios</h1>
+    <button mat-raised-button color="primary">Agregar usuario</button>
 
     <table mat-table [dataSource]="data" class="mat-elevation-z8">
         <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
-            <th mat-header-cell *matHeaderCellDef> {{column}} </th>
-            <td mat-cell *matCellDef="let element"> {{element[column]}}
+            <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
+            <td mat-cell *matCellDef="let element">
+                {{ element[column] }}
                 <div *ngIf="column == 'Acciones'">
                     <button mat-icon-button>
                         <mat-icon class="editarBoton">edit</mat-icon>
@@ -17,7 +18,8 @@
             </td>
         </ng-container>
 
-        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-        <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplayP"></tr>
+        <tr mat-row *matRowDef="let row; columns: columnsToDisplayP"></tr>
     </table>
+
 </div>
