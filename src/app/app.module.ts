@@ -27,8 +27,15 @@ import { MatIconModule } from '@angular/material/icon';
     PurchaseComponent,
   ],
   imports: [
-    BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, BrowserAnimationsModule, 
-    MatTableModule, MatButtonModule, MatIconModule],
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatButtonModule,
+    MatIconModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
