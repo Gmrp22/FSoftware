@@ -1,37 +1,31 @@
-import {Component, OnInit} from '@angular/core';
-
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-];
+import { Component, OnInit } from '@angular/core';
+import { VentaService } from 'src/app/services/ventas/venta.service';
+import { Venta } from '../../interfaces/venta';
+let venta: Venta[] = [];
 @Component({
-  selector: 'app-sale',
-  templateUrl: './sale.component.html',
-  styleUrls: ['./sale.component.css']
-})
-export class SaleComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+    selector: 'app-sale',
+    templateUrl: './sale.component.html',
+    styleUrls: ['./sale.component.css']
+  })
+export class VentasComponent implements OnInit {
+  constructor(private VentasServices: VentaService) {
+    this.getAllVentas();
   }
-  displayedColumns: string[] = ['name', 'weight', 'symbol', 'position', 'Acciones'];
+  getAllVentas() {
+    this.VentasServices.getAllVentas().subscribe((response: any) => {
+      console.log(response.usuario);
+      this.data = response;
+    });
+  }
+
+  ngOnInit(): void {}
+  displayedColumns: string[] = [
+    'fecha',
+    'usuario',
+    'total',
+    'estado',
+    'Acciones',
+  ];
   columnsToDisplay: string[] = this.displayedColumns.slice();
-  data: PeriodicElement[] = ELEMENT_DATA;
+  data: Venta[] = venta;
 }
-export class ButtonOverviewExample {}

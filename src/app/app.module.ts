@@ -7,7 +7,7 @@ import { SideBarComponent } from './Components/side-bar/side-bar.component';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { UsersComponent } from './Components/users/users.component';
 import { ProductsComponent } from './Components/products/products.component';
-import { SaleComponent } from './Components/sale/sale.component';
+import { VentasComponent } from './Components/sale/sale.component';
 import { PurchaseComponent } from './Components/purchase/purchase.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,7 +23,7 @@ import { MatIconModule } from '@angular/material/icon';
     NavBarComponent,
     UsersComponent,
     ProductsComponent,
-    SaleComponent,
+    VentasComponent,
     PurchaseComponent,
   ],
   imports: [
