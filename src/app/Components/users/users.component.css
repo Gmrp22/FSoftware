@@ -1,11 +1,27 @@
-.users-div {
-  background-color: yellow;
+table {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 15px;
+}
+
+button {
+  margin-left: 3%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.users-div { 
   height: 309px;
   float: right;
   width: 85%;
 }
-@media (max-width: 762px) {
-  .users-div {
-    max-width: 70%;
-  }
+.titulo{
+  margin-left: 3%;
+  margin-top: 1%;
+}
+.editarBoton{
+  color: gray;
+}
+.eliminarBoton{
+  color: gray;
 }

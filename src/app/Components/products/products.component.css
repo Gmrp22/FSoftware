@@ -1,17 +1,27 @@
-.products-div {
-  border: 1px;
-  border-style: solid;
-  border-color: blue;
+table {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 15px;
+}
+
+button {
+  margin-left: 3%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.products-div { 
+  height: 309px;
   float: right;
   width: 85%;
-  height: fit-content;
 }
-.products-div form {
-  margin: 40px;
-  padding: 20px;
+.titulo{
+  margin-left: 3%;
+  margin-top: 1%;
 }
-@media (max-width: 762px) {
-  .products-div {
-    max-width: 70%;
-  }
+.editarBoton{
+  color: gray;
+}
+.eliminarBoton{
+  color: gray;
 }
