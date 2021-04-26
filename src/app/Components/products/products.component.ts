@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/services/products/products.service';
 import { Products } from '../../interfaces/products';
 
-const products: Products[] = [];
+let products: Products[] = [];
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
