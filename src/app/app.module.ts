@@ -11,6 +11,10 @@ import { SaleComponent } from './Components/sale/sale.component';
 import { PurchaseComponent } from './Components/purchase/purchase.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     SaleComponent,
     PurchaseComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
+  imports: [
+    BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, BrowserAnimationsModule, 
+    MatTableModule, MatButtonModule, MatIconModule],
   providers: [],
   bootstrap: [AppComponent],
 })
