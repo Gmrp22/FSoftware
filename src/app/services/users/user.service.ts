@@ -8,7 +8,7 @@ import { User } from '../../interfaces/user';
 export class UserService {
   private api = 'http://127.0.0.1:8000/usuario/';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getAllUsers() {
     const path = `${this.api}`;
@@ -17,6 +17,10 @@ export class UserService {
   createUser(usuario: User) {
     const path = `${this.api}`;
     return this.http.post(path, usuario);
+  }
+  deleteUser(id: number) {
+    const path = `${this.api}${id}`
+    return this.http.delete<User>(path)
   }
 
   // getTask(id: string) {

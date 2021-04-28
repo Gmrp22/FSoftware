@@ -14,6 +14,12 @@ export class UsersComponent implements OnInit {
     this.getAllUsers();
   }
 
+  delete(id: number) {
+    this.UserService.deleteUser(id).subscribe(data=>{
+      this.getAllUsers()
+    });
+  }
+
   getAllUsers() {
     this.UserService.getAllUsers().subscribe((response: any) => {
       this.data = response;

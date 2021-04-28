@@ -18,6 +18,12 @@ export class VentasComponent implements OnInit {
     });
   }
 
+  delete(id: number) {
+    this.VentasServices.deleteVenta(id).subscribe(data=>{
+      this.getAllVentas()
+    });
+  }
+
   ngOnInit(): void {}
   displayedColumns: string[] = [
     'fecha',

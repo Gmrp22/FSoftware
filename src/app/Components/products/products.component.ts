@@ -19,6 +19,13 @@ export class ProductsComponent implements OnInit {
       this.data = response;
     });
   }
+
+  delete(id: number) {
+    this.ProductsServices.deleteProducto(id).subscribe(data=>{
+      this.getAllProducts()
+    });
+  }
+
   ngOnInit(): void {}
   displayedColumns: string[] = [
     'nombre',

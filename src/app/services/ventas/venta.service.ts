@@ -13,4 +13,8 @@ export class VentaService {
     const path = `${this.api}`;
     return this.http.get<Venta[]>(path);
   }
+  deleteVenta(id: number) {
+    const path = `${this.api}${id}`
+    return this.http.delete<Venta>(path)
+  }
 }

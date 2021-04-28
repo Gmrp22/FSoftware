@@ -18,6 +18,12 @@ export class PurchaseComponent implements OnInit {
     });
   }
 
+  delete(id: number) {
+    this.PurchaseServices.deletePurchase(id).subscribe(data=>{
+      this.getAllPurchase()
+    });
+  }
+
   ngOnInit(): void {}
   displayedColumns: string[] = [
     'fecha',

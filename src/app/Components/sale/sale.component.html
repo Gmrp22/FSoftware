@@ -11,7 +11,7 @@
                         <mat-icon class="editarBoton">edit</mat-icon>
                     </button>
                     <button mat-icon-button>
-                        <mat-icon class="eliminarBoton">delete</mat-icon>
+                        <mat-icon (click)="delete(element['id'])" class="eliminarBoton">delete</mat-icon>
                     </button>
                 </div>
             </td>

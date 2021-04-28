@@ -18,6 +18,10 @@ export class ProductsService {
     const path = `${this.api}`;
     return this.http.post(path, product);
   }
+  deleteProducto(id: number) {
+    const path = `${this.api}${id}`
+    return this.http.delete<Products>(path)
+  }
 
   // getTask(id: string) {
   //   const path = `${this.api}/todos/${id}`;
