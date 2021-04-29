@@ -1,30 +1,70 @@
 <div class="users-div">
-    <h1 class="titulo">Usuarios</h1>
+  <h1 class="titulo">Usuarios</h1>
 
-    <mat-tab-group mat-align-tabs="center">
-        <mat-tab label="Listado">
-            <table mat-table [dataSource]="data" class="mat-elevation-z8">
-                <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
-                    <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
-                    <td mat-cell *matCellDef="let element">
-                        {{ element[column] }}
-                        <div *ngIf="column == 'Acciones'">
-                            <button mat-icon-button>
-                                <mat-icon class="editarBoton">edit</mat-icon>
-                            </button>
-                            <button mat-icon-button>
-                                <mat-icon (click)="delete(element['id'])" class="eliminarBoton">delete</mat-icon>
-                            </button>
-                        </div>
-                    </td>
-                </ng-container>
+  <mat-tab-group
+    mat-align-tabs="center"
+    style="height: 800px"
+    (selectedTabChange)="resetTable()"
+  >
+    <mat-tab label="Usuarios">
+      <table mat-table [dataSource]="data" class="mat-elevation-z8">
+        <ng-container
+          [matColumnDef]="column"
+          *ngFor="let column of displayedColumns"
+        >
+          <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element[column] }}
+            <div *ngIf="column == 'Acciones'">
+              <button mat-icon-button>
+                <mat-icon class="editarBoton">edit</mat-icon>
+              </button>
+              <button mat-icon-button>
+                <mat-icon (click)="delete(element['id'])" class="eliminarBoton"
+                  >delete</mat-icon
+                >
+              </button>
+            </div>
+          </td>
+        </ng-container>
 
-                <tr mat-header-row *matHeaderRowDef="columnsToDisplayP"></tr>
-                <tr mat-row *matRowDef="let row; columns: columnsToDisplayP"></tr>
-            </table>
-        </mat-tab>
-        <mat-tab label="Crear">
-        </mat-tab>
-    </mat-tab-group>
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplayP"></tr>
+        <tr mat-row *matRowDef="let row; columns: columnsToDisplayP"></tr>
+      </table>
+    </mat-tab>
+    <mat-tab label="Crear Usuario">
+      <div class="products-div">
+        <form (ngSubmit)="createUser()" [formGroup]="UserForm">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input
+              type="nombre"
+              class="form-control"
+              id="nombre"
+              formControlName="nombre"
+              placeholder="Nombre"
+            />
+            <label for="usuario">Usuario</label>
+            <input
+              type="text"
+              class="form-control"
+              id="usuario"
+              formControlName="usuario"
+              placeholder="Usuario"
+            />
+            <label for="password">Contraseña</label>
+            <input
+              type="text"
+              class="form-control"
+              id="password"
+              formControlName="password"
+              placeholder="Contraseña"
+            />
+          </div>
 
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
 </div>

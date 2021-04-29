@@ -1,24 +1,87 @@
 <div class="products-div">
   <h1 class="titulo">Productos</h1>
-  <button mat-raised-button color="primary">Agregar producto</button>
+  <mat-tab-group
+    mat-align-tabs="center"
+    style="height: 800px"
+    (selectedTabChange)="resetTable()"
+  >
+    <mat-tab label="Productos">
+      <table mat-table [dataSource]="data" class="mat-elevation-z8">
+        <ng-container
+          [matColumnDef]="column"
+          *ngFor="let column of displayedColumns"
+        >
+          <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element[column] }}
+            <div *ngIf="column == 'Acciones'">
+              <button mat-icon-button>
+                <mat-icon class="editarBoton">edit</mat-icon>
+              </button>
+              <button mat-icon-button>
+                <mat-icon (click)="delete(element['id'])" class="eliminarBoton"
+                  >delete</mat-icon
+                >
+              </button>
+            </div>
+          </td>
+        </ng-container>
 
-  <table mat-table [dataSource]="data" class="mat-elevation-z8">
-    <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
-      <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
-      <td mat-cell *matCellDef="let element">
-        {{ element[column] }}
-        <div *ngIf="column == 'Acciones'">
-          <button mat-icon-button>
-            <mat-icon class="editarBoton">edit</mat-icon>
-          </button>
-          <button mat-icon-button>
-            <mat-icon (click)="delete(element['id'])" class="eliminarBoton">delete</mat-icon>
-          </button>
-        </div>
-      </td>
-    </ng-container>
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplayP"></tr>
+        <tr mat-row *matRowDef="let row; columns: columnsToDisplayP"></tr>
+      </table>
+    </mat-tab>
+    <mat-tab label="Crear Producto">
+      <div class="products-div">
+        <form (ngSubmit)="createProduct()" [formGroup]="ProductsForm">
+          <div class="form-group">
+            <label for="productName">Nombre Producto</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              formControlName="nombre"
+              placeholder="Nombre Producto"
+            />
+            <label for="purchasePrice">Precio Compra</label>
+            <input
+              type="text"
+              class="form-control"
+              id="precio_compra"
+              formControlName="precio_compra"
+              placeholder="Precio Compra"
+            />
+            <label for="salePrice">Precio Venta</label>
+            <input
+              type="text"
+              class="form-control"
+              id="precio_venta"
+              formControlName="precio_venta"
+              placeholder="Precio Venta"
+            />
+            <label for="description">Descripcion</label>
+            <input
+              type="text"
+              class="form-control"
+              id="descripcion"
+              formControlName="descripcion"
+              placeholder="Descripcion"
+            />
+            <label for="stock">Existencias</label>
+            <input
+              type="text"
+              class="form-control"
+              id="existencias"
+              formControlName="existencias"
+              placeholder="Existencias"
+            />
+          </div>
 
-    <tr mat-header-row *matHeaderRowDef="columnsToDisplayP"></tr>
-    <tr mat-row *matRowDef="let row; columns: columnsToDisplayP"></tr>
-  </table>
+          <button type="submit" class="btn btn-primary sub-button">
+            Submit
+          </button>
+        </form>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
 </div>

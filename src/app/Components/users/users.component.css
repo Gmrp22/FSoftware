@@ -10,18 +10,78 @@ button {
   margin-top: 1%;
   margin-bottom: 1%;
 }
-.users-div { 
-  height: 309px;
+.users-div {
+  margin-top: 5px;
+  height: 500px;
   float: right;
   width: 85%;
+  padding: 20px;
 }
-.titulo{
+.titulo {
   margin-left: 3%;
   margin-top: 1%;
 }
-.editarBoton{
+.editarBoton {
   color: gray;
 }
-.eliminarBoton{
+.eliminarBoton {
   color: gray;
+}
+table {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 15px;
+}
+
+button {
+  margin-left: 3%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.products-div {
+  margin-top: 5px;
+  height: 500px;
+  float: right;
+  width: 85%;
+  padding: 20px;
+}
+.titulo {
+  margin-left: 3%;
+  margin-top: 1%;
+}
+.editarBoton {
+  color: gray;
+}
+.eliminarBoton {
+  color: gray;
+}
+.mat-header-cell {
+  font-variant: small-caps;
+}
+
+.form-control {
+  width: 80%;
+  margin: 2px 2px 2px 2px;
+}
+label {
+  margin-top: 15px;
+  font-weight: bold;
+}
+button {
+  margin-left: 0px;
+}
+h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+.mat-header-cell {
+  font-size: 18px;
+  font-weight: bold;
+}
+.eliminarBoton:hover {
+  color: red;
+}
+.editarBoton:hover {
+  color: yellow;
 }

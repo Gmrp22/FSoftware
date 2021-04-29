@@ -1,7 +1,7 @@
 export interface Venta {
-    id: number;
-    fecha: Date;
-    usuario: number;
-    total: number;
-    estado: String;
+  id: number;
+  fecha: Date;
+  usuario: string;
+  total: number;
+  estado: String;
 }
