@@ -10,18 +10,50 @@ button {
   margin-top: 1%;
   margin-bottom: 1%;
 }
-.users-div { 
+.users-div {
   height: 309px;
   float: right;
   width: 85%;
 }
-.titulo{
+.titulo {
   margin-left: 3%;
   margin-top: 1%;
 }
-.editarBoton{
+.editarBoton {
   color: gray;
 }
-.eliminarBoton{
+.eliminarBoton {
   color: gray;
+}
+table {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 15px;
+}
+
+button {
+  margin-left: 3%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.products-div {
+  margin-top: 5px;
+  height: 500px;
+  float: right;
+  width: 85%;
+  padding: 20px;
+}
+.titulo {
+  margin-left: 3%;
+  margin-top: 1%;
+}
+.editarBoton {
+  color: gray;
+}
+.eliminarBoton {
+  color: gray;
+}
+.mat-header-cell {
+  font-variant: small-caps;
 }

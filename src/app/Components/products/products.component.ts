@@ -11,13 +11,6 @@ let products: Products[] = [];
 export class ProductsComponent implements OnInit {
   p: Products[] = [];
   ProductsForm: FormGroup;
-  // ProductsForm = this.formBuilder.group({
-  //   nombre: '',
-  //   precio_compra: 0,
-  //   precio_venta: 0,
-  //   descripcion: '',
-  //   existencias: 0,
-  // });
 
   constructor(
     private ProductsServices: ProductsService,
@@ -75,7 +68,6 @@ export class ProductsComponent implements OnInit {
   columnsToDisplayP: string[] = this.displayedColumns.slice();
   data: Products[] = products;
   resetTable() {
-    console.log('ddddddd');
     this.getAllProducts();
   }
 }

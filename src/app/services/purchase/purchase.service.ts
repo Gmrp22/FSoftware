@@ -13,8 +13,12 @@ export class PurchaseService {
     const path = `${this.api}`;
     return this.http.get<Purchase[]>(path);
   }
+  createPurchase(purchase: Purchase) {
+    const path = `${this.api}`;
+    return this.http.post(path, purchase);
+  }
   deletePurchase(id: number) {
-    const path = `${this.api}${id}`
-    return this.http.delete<Purchase>(path)
+    const path = `${this.api}${id}`;
+    return this.http.delete<Purchase>(path);
   }
 }
