@@ -16,7 +16,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
-
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatTableModule,
     MatButtonModule,
     MatIconModule,
-    MatTabsModule
+    MatTabsModule,
+    ReactiveFormsModule, //Add if needed
+    FormsModule, //Add if needed
   ],
   providers: [],
   bootstrap: [AppComponent],
