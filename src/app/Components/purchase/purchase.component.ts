@@ -25,6 +25,12 @@ export class PurchaseComponent implements OnInit {
   }
   getAllPurchase() {
     this.PurchaseServices.getAllPurchase().subscribe((response: any) => {
+      let len = response.length;
+      let cont = 0;
+      while (cont < len) {
+        response[cont].usuario = response[cont].usuario.nombre;
+        cont += 1;
+      }
       this.data = response;
     });
   }

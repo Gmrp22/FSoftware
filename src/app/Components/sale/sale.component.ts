@@ -25,7 +25,12 @@ export class VentasComponent implements OnInit {
   }
   getAllVentas() {
     this.VentasServices.getAllVentas().subscribe((response: any) => {
-      console.log(response.usuario);
+      let len = response.length;
+      let cont = 0;
+      while (cont < len) {
+        response[cont].usuario = response[cont].usuario.nombre;
+        cont += 1;
+      }
       this.data = response;
     });
   }

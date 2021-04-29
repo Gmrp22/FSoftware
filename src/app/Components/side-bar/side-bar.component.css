@@ -27,3 +27,6 @@
     margin-left: 0px;
   }
 }
+.sidebar-list li a:hover {
+  color: greenyellow;
+}

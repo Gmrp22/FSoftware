@@ -30,3 +30,29 @@ button {
 .mat-header-cell {
   font-variant: small-caps;
 }
+.form-control {
+  width: 80%;
+  margin: 2px 2px 2px 2px;
+}
+label {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+button {
+  margin-left: 0px;
+}
+h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+.mat-header-cell {
+  font-size: 18px;
+  font-weight: bold;
+}
+.eliminarBoton:hover {
+  color: red;
+}
+.editarBoton:hover {
+  color: yellow;
+}
